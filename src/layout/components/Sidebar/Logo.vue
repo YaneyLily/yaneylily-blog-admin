@@ -4,7 +4,7 @@
  * @Github: https://github.com/YaneyLily
  * @Date: 2021-07-13 09:31:24
  * @LastEditors: Yaney
- * @LastEditTime: 2021-07-13 11:03:05
+ * @LastEditTime: 2021-07-13 11:47:39
 -->
 <template>
   <div class="sidebar-logo-container" :class="{'collapse':collapse}">
@@ -32,7 +32,7 @@ export default {
   },
   data() {
     return {
-      title: 'yaneylily 博客管理系统',
+      title: 'Yaney博客权限管理系统',
       logo: require('@/assets/li.png') // 修改侧边栏的标题和图标
     }
   }

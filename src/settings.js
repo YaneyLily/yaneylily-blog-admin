@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: 'yaneylily 博客管理系统',
+  title: 'Yaney博客权限管理系统',
 
   /**
    * @type {boolean} true | false
