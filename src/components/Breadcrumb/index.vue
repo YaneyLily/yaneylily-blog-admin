@@ -1,3 +1,11 @@
+<!--
+ * @Description: 导航栏面包屑
+ * @Author: Yaney
+ * @Github: https://github.com/YaneyLily
+ * @Date: 2021-07-13 09:31:24
+ * @LastEditors: Yaney
+ * @LastEditTime: 2021-07-13 15:30:54
+-->
 <template>
   <el-breadcrumb class="app-breadcrumb" separator="/">
     <transition-group name="breadcrumb">
@@ -33,7 +41,7 @@ export default {
       const first = matched[0]
 
       if (!this.isDashboard(first)) {
-        matched = [{ path: '/dashboard', meta: { title: 'Dashboard' }}].concat(matched)
+        matched = [{ path: '/dashboard', meta: { title: '首页' }}].concat(matched)
       }
 
       this.levelList = matched.filter(item => item.meta && item.meta.title && item.meta.breadcrumb !== false)

@@ -1,10 +1,20 @@
+<!--
+ * @Description: 布局的index.vue。可以使用标签导航组件
+ * @Author: Yaney
+ * @Github: https://github.com/YaneyLily
+ * @Date: 2021-07-13 09:31:24
+ * @LastEditors: Yaney
+ * @LastEditTime: 2021-07-13 21:10:45
+-->
 <template>
   <div :class="classObj" class="app-wrapper">
     <div v-if="device==='mobile'&&sidebar.opened" class="drawer-bg" @click="handleClickOutside" />
     <sidebar class="sidebar-container" />
-    <div class="main-container">
+    <div class="hasTagsView main-container">
       <div :class="{'fixed-header':fixedHeader}">
         <navbar />
+        <!-- 使用标签导航组件 -->
+        <tags-view />
       </div>
       <app-main />
     </div>
@@ -12,7 +22,8 @@
 </template>
 
 <script>
-import { Navbar, Sidebar, AppMain } from './components'
+// 1.导入标签当行组件TagsView
+import { Navbar, Sidebar, AppMain, TagsView } from './components'
 import ResizeMixin from './mixin/ResizeHandler'
 
 export default {
@@ -20,7 +31,8 @@ export default {
   components: {
     Navbar,
     Sidebar,
-    AppMain
+    AppMain,
+    TagsView // 2.引入TagsView组件
   },
   mixins: [ResizeMixin],
   computed: {
